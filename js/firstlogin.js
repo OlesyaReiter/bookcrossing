@@ -1,7 +1,5 @@
-
-
-function foo(){
 var arr = [];
+function foo(){
 	var user = {};
 	user.login = document.getElementById("login").value;
 	user.password = document.getElementById("password").value;
@@ -14,5 +12,16 @@ var arr = [];
 	user.findBookName = document.getElementById("findBookName").value;
 	user.findBookAuthor = document.getElementById("findBookAuthor").value;
 
-	console.log(arr.push(user));
+	arr.push(user);
+    console.log(arr);
+    document.getElementById("login").value = ""
+    document.getElementById("password").value = ""
+    document.getElementById("firstName").value = ""
+    document.getElementById("lastName").value = ""
+    document.getElementById("email").value = ""
+    document.getElementById("phone").value = ""
+    document.getElementById("myBookName").value = ""
+    document.getElementById("myBookAuthor").value = ""
+    document.getElementById("findBookName").value = ""
+    document.getElementById("findBookAuthor").value = ""
 }
