@@ -1,0 +1,19 @@
+main{
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #fff;
+    border-radius: 3px;
+    font: 1em/1.3em Arial, Tahoma, sans-serif;
+    display: flex;
+}
+
+.bl{
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fefefe;
+    border-radius: 3px;
+    margin: 20px;
+}
+
+

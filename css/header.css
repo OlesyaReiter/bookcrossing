@@ -1,0 +1,13 @@
+
+header{
+    width: auto;
+    height: 150px;
+    background: url(../images/header.jpg) center center;
+    background-size: cover;
+    padding: 20px;
+    color: black;}
+
+.h1_header{
+
+    text-align: right;
+}
