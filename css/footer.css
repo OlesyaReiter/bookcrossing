@@ -12,6 +12,8 @@ footer{
     float: right;
     margin-top: 50px;
     text-transform: uppercase;
+    font-family: 'Fira Sans', sans-serif;
     font-size: 12px;
     letter-spacing: 0.3em;
+    
 }

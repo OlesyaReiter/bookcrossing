@@ -8,6 +8,7 @@ header{
     color: black;}
 
 .h1_header{
-
+    font-family: 'Fira Sans', sans-serif;
     text-align: right;
+    vertical-align: bottom;
 }
