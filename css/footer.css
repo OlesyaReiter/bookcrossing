@@ -1,10 +1,10 @@
 footer{
     width: auto;
-    height: 150px;
+    height: 80px;
     background: url(../images/footer.jpg) center center;
     background-size: cover;
     padding: 20px;
-    color: white;
+    color: black;
 }
 
 .copyright{
