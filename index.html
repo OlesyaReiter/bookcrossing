@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
     <script src="js/nav.js"></script>
+    <script src="js/firstlogin.js"></script>
 
     <script src="https://use.fontawesome.com/f3fca8b6e1.js"></script>
     <title>Bookcrossing</title>
@@ -51,18 +52,43 @@
                     
                 </section>
                 <section class="section2" id="bookcrossing" style="display: none;">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eius, minima facilis. Tempora id
-                        nihil sint hic voluptas vel amet voluptatibus dolor perferendis accusantium error sit provident,
-                        perspiciatis, neque inventore assumenda voluptate consequatur fugit ratione et. Assumenda reprehenderit
-                        enim cupiditate distinctio harum quas perferendis laborum repellendus, modi expedita facilis nisi
-                        odit vitae sed sapiente adipisci asperiores porro dicta perspiciatis saepe culpa iusto minima! Nesciunt
-                        sapiente, rem dolorem nam sit modi!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eius, minima facilis. Tempora id
-                        nihil sint hic voluptas vel amet voluptatibus dolor perferendis accusantium error sit provident,
-                        perspiciatis, neque inventore assumenda voluptate consequatur fugit ratione et. Assumenda reprehenderit
-                        enim cupiditate distinctio harum quas perferendis laborum repellendus, modi expedita facilis nisi
-                        odit vitae sed sapiente adipisci asperiores porro dicta perspiciatis saepe culpa iusto minima! Nesciunt
-                        sapiente, rem dolorem nam sit modi!</p>
+                    <div class="form-div">
+                        
+							<label for="login">Login:</label>
+                        	<input type="text" id="login" name="login" placeholder="Your login.." required>
+							
+							<label for="password">Password:</label>
+                        	<input type="text" id="password" name="password" placeholder="Your password.." required>
+
+                        	<label for="firstName">First Name:</label>
+                        	<input type="text" id="firstName" name="firstName" placeholder="Your name.." required>
+
+                        	<label for="lastName">Last Name:</label>
+                        	<input type="text" id="lastName" name="lastName" placeholder="Your last name.." required>
+
+                        	<label for="email">Email:</label>
+                        	<input type="text" id="email" name="email" placeholder="example@gmail.com" required>
+
+							<label for="phone">Phone:</label>
+                        	<input type="text" id="phone" name="phone" placeholder="Your telephone.." required>
+
+                        	<label for="myBookName">My book title:</label>
+                        	<input type="text" id="myBookName" name="myBookName" placeholder="My book title"  required>
+
+                        	<label for="myBookAuthor">Author:</label>
+                        	<input type="text" id="myBookAuthor" name="myBookAuthor" placeholder="My author" required>
+
+							<label for="findBookName">Find book title:</label>
+                        	<input type="text" id="findBookName" name="findBookName" placeholder="Find book title"  required>
+
+                        	<label for="findBookAuthor">Author:</label>
+                        	<input type="text" id="findBookAuthor" name="findBookAuthor" placeholder="Find author" required>
+
+							<!-- <a href="" onclick="foo1()">asdads</a> -->
+                            <input type="button" value="button" onclick="foo()">
+                       
+                    </div>
+
                 </section>
                 <section class="section2" id="myroom" style="display: none;">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eius, minima facilis. Tempora id
