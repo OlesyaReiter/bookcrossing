@@ -25,3 +25,6 @@ function foo(){
     document.getElementById("findBookName").value = ""
     document.getElementById("findBookAuthor").value = ""
 }
+
+export {arr};
+
