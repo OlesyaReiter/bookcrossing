@@ -48,3 +48,4 @@ function logout(){
     myProfileTitle.innerHTML = 'My Profile';
     showMyRoomButton(false);
 }
+

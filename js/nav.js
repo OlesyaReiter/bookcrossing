@@ -22,7 +22,21 @@ function switchPage(id){
                 }
             }
         }
+
+        if (id === 'myroom'){
+            checkIfLogedIn();
+        }
 }
+
+function checkIfLogedIn(){
+    if (localStorage.getItem("nickName") && localStorage.getItem("nickName") !== ''){
+        var myProfileTitle = document.getElementById("myProfileTitle");
+        myProfileTitle.innerHTML += ' (' + localStorage.getItem("nickName") + ')';
+        showMyRoomButton(true);
+    }
+}
+
+
 // closes active page 
 function hideActivePage(){
     var section = document.getElementById(selectedId);
