@@ -17,7 +17,7 @@ function switchPage(id){
                 var obj = JSON.parse(value);
 
                 if (obj['author']){
-                    fillBookFormSmall(obj);
+                    fillBookFormSmall(localStorage.key(i), obj);
                     //fillBookForm(obj);
                 }
             }
@@ -64,11 +64,11 @@ function unselectOldButtonAndSelectNew(newButtonId){
         newButton.classList.add("nohover");
 }
 
-function fillBookFormSmall(dataObj){
+function fillBookFormSmall(key, dataObj){
     var div = document.getElementById("info_div");
     var divBook = document.getElementById("bookDivSmall");
     var clone = divBook.cloneNode(true); 
-    clone.id = "bookId1";
+    clone.id = key;
 
     var authorId = getElementSmall(clone, "bookAuthorSmall");
     var bookNameId = getElementSmall(clone, "bookNameSmall");
@@ -79,7 +79,7 @@ function fillBookFormSmall(dataObj){
     var viewMoreButton = getElementSmall(buttonsSmallContainer, "viewMoreButton");
 
     thumbsUpButton.addEventListener("click", function(){
-        alert('thumbsUpButton');
+        alert(key);
     });
 
     viewMoreButton.addEventListener("click", function(){
