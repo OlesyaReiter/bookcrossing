@@ -105,6 +105,7 @@ function foo(){
 
 			for (var a = 0 ; a < arr.length; a++) {
 
+
 				for (var b = 0; b < arr[a].myBookName.length; b++) {
 
 					if (arr[0].findBookName[x]===arr[a].myBookName[b]) {
@@ -136,47 +137,21 @@ function foo(){
 
 	compaire();
 
-console.log(result1);
+	console.log(result1);
+
+	function addMy(){
+		var len = arr[0].myBookName.length;
+		var addBook = document.getElementById("addMyBooks").value;
+		arr[0].myBookName.push(addBook);
+		document.getElementById("myBooks").innerHTML += arr[0].myBookName[len] +"</br>";
+		document.getElementById("addMyBooks").value = "";
+	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function addMy(){
-	var len = arr[0].myBookName.length;
-	var addBook = document.getElementById("addMyBooks").value;
-	arr[0].myBookName.push(addBook);
-	document.getElementById("myBooks").innerHTML += arr[0].myBookName[len] +"</br>";
-	document.getElementById("addMyBooks").value = "";
-}
-
-function addNeed(){
-	var len = arr[0].myBookName.length;
-	var addBook = document.getElementById("addNeededBooks").value;
-	arr[0].myBookName.push(addBook);
-	document.getElementById("neededBooks").innerHTML += arr[0].myBookName[len] +"</br>";
-	document.getElementById("addNeededBooks").value = "";
-}
+	function addNeed(){
+		var len = arr[0].myBookName.length;
+		var addBook = document.getElementById("addNeededBooks").value;
+		arr[0].myBookName.push(addBook);
+		document.getElementById("neededBooks").innerHTML += arr[0].myBookName[len] +"</br>";
+		document.getElementById("addNeededBooks").value = "";
+	}
