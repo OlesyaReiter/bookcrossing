@@ -23,7 +23,7 @@
 .main-book-content{
     display: flex; 
     flex-direction: column;
-    width: 100%; 
+    width: 100vw;
     padding: 5px;
 }
 

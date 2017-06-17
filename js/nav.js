@@ -17,7 +17,8 @@ function switchPage(id){
                 var obj = JSON.parse(value);
 
                 if (obj['author']){
-                    fillBookForm(obj);
+                    fillBookFormSmall(obj);
+                    //fillBookForm(obj);
                 }
             }
         }
@@ -49,34 +50,23 @@ function unselectOldButtonAndSelectNew(newButtonId){
         newButton.classList.add("nohover");
 }
 
-function addTwoDUMMYBooks(){
-        fillBookForm({
-            author: 'author 1',
-            bookName: 'bookName 1',
-            bookYear: 'bookYear 1',
-            isbn: 'isbn 1',
-            bookState: 'bookState 1',
-            requestedAuthor: 'requestedAuthor 1',
-            requestedBookName: 'requestedBookName 1',
-            requestedBookYear: 'requestedBookYear 1',
-            requestedIsbn: 'requestedIsbn 1',
-            requestedBookState: 'requestedBookState 1',
-            comment: 'comment 1'
-        });
+function fillBookFormSmall(dataObj){
+    var div = document.getElementById("info_div");
+    var divBook = document.getElementById("bookDivSmall");
+    var clone = divBook.cloneNode(true); 
+    clone.id = "bookId1";
 
-        fillBookForm({
-            author: 'author 2',
-            bookName: 'bookName 2',
-            bookYear: 'bookYear 2',
-            isbn: 'isbn 2',
-            bookState: 'bookState 2',
-            requestedAuthor: 'requestedAuthor 2',
-            requestedBookName: 'requestedBookName 2',
-            requestedBookYear: 'requestedBookYear 2',
-            requestedIsbn: 'requestedIsbn 2',
-            requestedBookState: 'requestedBookState 2',
-            comment: 'comment 2'
-        });
+    var authorId = getElementSmall(clone, "bookAuthorSmall");
+    var bookNameId = getElementSmall(clone, "bookNameSmall");
+    var commentId = getElementSmall(clone, "bookCommentSmall");
+
+
+    authorId.innerHTML = dataObj.author ? dataObj.author : "-";
+    bookNameId.innerHTML = dataObj.bookName ? dataObj.bookName : "-";    
+    commentId.innerHTML = dataObj.bookDescript ? dataObj.bookDescript : "-";
+
+    clone.style.display = 'block';
+    div.insertBefore(clone, div.firstChild);
 }
 
 function fillBookForm(dataObj){
@@ -117,6 +107,20 @@ function fillBookForm(dataObj){
 
 function getElement(clone, id){
     var elements = clone.getElementsByClassName("book-info-span");
+
+    for (var i = 0; i < elements.length; i++){
+        var el = elements[i];
+
+        if (el.id === id){
+            return el;
+        }
+    }
+
+    return null;
+}
+
+function getElementSmall(clone, id){
+    var elements = clone.childNodes;
 
     for (var i = 0; i < elements.length; i++){
         var el = elements[i];
