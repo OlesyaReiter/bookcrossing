@@ -11,3 +11,7 @@ function switchVisible() {
                 }
             }
 }
+
+function showForm(){
+    document.getElementById("formLogin").style.display = 'block';
+}
