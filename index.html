@@ -144,11 +144,12 @@
       <!-- Profile -->
       <div class="w3-card-2 w3-round w3-white">
         <div class="w3-container">
-         <h4 class="w3-center">My Profile</h4>
+         <h4 class="w3-center" id="myProfileTitle">My Profile</h4>
          <p class="w3-center"><img src="images/avatar.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <div align="left" >
-          <a class="button-entry" onclick="Login()">Create new entry</a>
-          <a class="button-entry" onclick="showIntroduceForm()">Introduce yourself</a>
+          <a class="button-entry hide-button" onclick="showForm()" id="newEntryButton">Create new entry</a>
+          <a class="button-entry" onclick="showIntroduceForm()" id="introduceButton">Introduce yourself</a>
+          <a class="button-entry hide-button" onclick="logout()" id="logoutButton">Logout</a>
          </div>
         
       <div class="form-login" id="formLogin"> 
