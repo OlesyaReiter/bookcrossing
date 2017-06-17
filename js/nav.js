@@ -75,9 +75,9 @@ function fillBookFormSmall(dataObj){
     var ownerSmallContainer = getElementSmall(clone, "ownerSmallContainer");
     var ownerSmall = getElementSmall(ownerSmallContainer, "ownerSmall");
 
-    authorId.innerHTML = dataObj.author ? dataObj.author : "-";
-    bookNameId.innerHTML = dataObj.bookName ? dataObj.bookName : "-";    
-    commentId.innerHTML = dataObj.bookDescript ? dataObj.bookDescript : "-";
+    authorId.innerHTML = dataObj.author ? dataObj.author : "N/A";
+    bookNameId.innerHTML = dataObj.bookName ? dataObj.bookName : "N/A";    
+    commentId.innerHTML = dataObj.bookDescript ? dataObj.bookDescript : "N/A";
     //Inserting the owner information
     ownerSmall.innerHTML = dataObj.owner ? dataObj.owner : "N/A";
 
