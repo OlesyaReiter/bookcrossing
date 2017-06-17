@@ -27,4 +27,24 @@ function foo(){
 }
 
 
+	var Petro = {
+	firstName: "Petro",
+	lastName : "Makitra",
+	email : "makitra@mail.com",
+	phone : "3803214455",
+	myBookName : ["Harry Potter and the Philosopher's Stone", "Harry Potter and the Chamber of Secrets", ""],
+	myBookAuthor : ["J.K. Rowling", "J.K. Rowling"],
+	findBookName : ["Help Your Kids with Maths"],
+	findBookAuthor : ["Carol Vorderman"],
+	}
 
+	var Ivan = {
+	firstName: "Ivan",
+	lastName : "Durko",
+	email : "durko@mail.com",
+	phone : "3803114455",
+	myBookName : ["Help Your Kids with Maths"],
+	myBookAuthor : ["Carol Vorderman"],
+	findBookName : ["Help Your Kids with Maths" "Harry Potter and the Philosopher's Stone"],
+	findBookAuthor : ["J.K. Rowling"],
+	}
