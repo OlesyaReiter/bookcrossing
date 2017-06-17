@@ -15,6 +15,6 @@
 		flex-direction: row;
 	}
 
-	#myBooks #neededBooks {
-		flex:1;
+	#myBooks, #neededBooks {
+		margin: 20px;
 	}
