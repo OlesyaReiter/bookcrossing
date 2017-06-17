@@ -1,0 +1,22 @@
+.info-item{
+    display: flex; 
+    flex-direction: column;
+     width: 30%; 
+     padding: 5px;
+}
+.info-item-comment{
+    display: flex; 
+    flex-direction: column;
+     width: 100%; 
+     padding: 5px;
+}
+
+
+.book-one-item{
+    display: flex;
+     width:700px; 
+     justify-content: space-around;
+     flex-flow: row wrap;
+     border: 1px solid #ccc;
+     margin-top: 10px;
+}
