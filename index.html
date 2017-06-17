@@ -130,23 +130,29 @@
           <a class="button-entry" onclick="showForm()">Create new entry</a>
          </div>
         
-     <div class="form-login" id="formLogin" >
+      <div class="form-login" id="formLogin"> 
+
+              <div class="first">
+                <fieldset>
+                  <legend>BOOK WHICH YOU HAVE</legend>
                         
-                          <label for="author">Author:</label>
-                          <input type="text" id="myBookauthor" name="author" placeholder=" Please write author of book" required>
-              
-                          <label for="bookName">Book name:</label>
-                          <input type="text" id="myBookName" name="bookName" placeholder="Please write name of book" required>
+                        <div class="one">
+                              <label for="author">Author:</label>
+                              <input type="text" id="myBookauthor" name="author" placeholder=" Please write author of book" required>
+                  
+                              <label for="bookName">Book name:</label>
+                              <input type="text" id="myBookName" name="bookName" placeholder="Please write name of book" required>
 
-                          <label for="bookYear">Book year</label>
-                          <input type="text" id="myBookYear" name="bookYear" placeholder="year" required>
-
-                          <label for="bookIsbm">ISBN:</label>
-                          <input type="text" id="myBookIsbn" name="bookIsbm" placeholder="Please write ISBN number" required>
-
+                              <label for="bookYear">Book year</label>
+                              <input type="text" id="myBookYear" name="bookYear" placeholder="Please write year of book" required>    
+                      </div>
                           
+                       <div class="two">
 
-                          <label for="statys">State book:</label>
+                              <label for="bookIsbm">ISBN:</label>
+                              <input type="text" id="myBookIsbn" name="bookIsbm" placeholder="Please write ISBN number" required>
+
+                              <label for="statys">State book:</label>
                            <select name="statys" id="statys" name="statys">
                             <option value="good">good</option>
                             <option value="normal">normal</option>
@@ -154,33 +160,54 @@
                           </select>
 
 
+                          </div>
+                        </fieldset>
+                     </div>  
+                
 
-                        <label for="author2">Author:</label>
-                          <input type="text" id="findBookauthor" name="author2" placeholder=" Please write author of book" required>
-              
-                          <label for="bookName">Book name:</label>
-                          <input type="text" id="findBookName" name="bookName" placeholder="Please write name of book" required>
 
-                          <label for="bookYear">Book year</label>
-                          <input type="text" id="findBookYear" name="bookYear" placeholder="year" required>
+<div class="second">
+                <fieldset>
+                  <legend>BOOK WHICH YOU WONT FIND </legend>
+                        
+                        <div class="one">
+                              <label for="author">Author:</label>
+                              <input type="text" id="findBookauthor" name="author" placeholder=" Please write author of book" required>
+                  
+                              <label for="bookName">Book name:</label>
+                              <input type="text" id="findBookName" name="bookName" placeholder="Please write name of book" required>
 
-                          <label for="bookIsbm">ISBN:</label>
-                          <input type="text" id="findBookIsbn" name="bookIsbm" placeholder="Please write ISBN number" required>
-                         
-                          <label for="BookIsbn">State book:</label>
+                              <label for="bookYear">Book year</label>
+                              <input type="text" id="findBookYear" name="bookYear" placeholder="Please write year of book" required>    
+                      </div>
+                          
+                       <div class="two">
+
+                              <label for="bookIsbm">ISBN:</label>
+                              <input type="text" id="findBookIsbn" name="bookIsbm" placeholder="Please write ISBN number" required>
+
+                              <label for="BookIsbn">State book:</label>
                            <select name="BookIsbn" id="BookIsbn" name="BookIsbn">
                             <option value="good">good</option>
                             <option value="normal">normal</option>
                             <option value="bad">bad</option>
-                          </select>                       
-        
-                        
-                              <textarea rows="6" cols="100" name="description" id="bookDescript" placeholder="Enter book description here"></textarea>
-                      
+                          </select>
 
-                     <input type="button" value="button" onclick="foo()">
+                          </div>
+                        </fieldset>
+                     </div> 
 
-      </div>
+                    <form action="" id="bookDescript">
+                          <fieldset>
+                          <legend>BOOK DESCRIPTION</legend>
+                                  <textarea rows="6" cols="100" name="description" placeholder="Enter book description here"></textarea>
+                           </fieldset>         
+                  </form>
+
+                    <input class="button" type="button" value="SEND" onclick="foo(); switchVisible()">
+
+                </div>
+
       <br>
       
     
