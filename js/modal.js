@@ -13,3 +13,11 @@ function showIntroduceForm(){
         modal.style.display = "block";
     }
 }
+
+function Login(){
+    var name = document.getElementById("nickName").value;
+    localStorage.setItem("nickName", name);
+
+    alert(localStorage.getItem("nickName"));
+    closeModal();
+}
