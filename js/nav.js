@@ -98,6 +98,9 @@ function fillBookFormSmall(key, dataObj){
 
         array.push(mapping);
         localStorage.setItem('booksMappings', JSON.stringify(array));
+
+        this.classList.add("requested-button");
+        showMessageForm();
     });
 
     viewMoreButton.addEventListener("click", function(){
