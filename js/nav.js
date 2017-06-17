@@ -60,6 +60,17 @@ function fillBookFormSmall(dataObj){
     var bookNameId = getElementSmall(clone, "bookNameSmall");
     var commentId = getElementSmall(clone, "bookCommentSmall");
 
+    var buttonsSmallContainer = getElementSmall(clone, "buttonsSmallContainer");
+    var thumbsUpButton = getElementSmall(buttonsSmallContainer, "thumbsUpButton");
+    var viewMoreButton = getElementSmall(buttonsSmallContainer, "viewMoreButton");
+
+    thumbsUpButton.addEventListener("click", function(){
+        alert('thumbsUpButton');
+    });
+
+    viewMoreButton.addEventListener("click", function(){
+        alert('viewMoreButton');
+    });
 
     authorId.innerHTML = dataObj.author ? dataObj.author : "-";
     bookNameId.innerHTML = dataObj.bookName ? dataObj.bookName : "-";    
