@@ -23,6 +23,7 @@ function Login(){
     closeModal();
 
     showMyRoomButton(true);
+    showBookTable();
 }
 
 //If we are loged in we show 'Create new entry' and 'Logout' buttons, otherwise show only 'Introduce' button
@@ -47,5 +48,6 @@ function logout(){
     var myProfileTitle = document.getElementById("myProfileTitle");
     myProfileTitle.innerHTML = 'My Profile';
     showMyRoomButton(false);
+    document.getElementById('loader_table').style.display = 'none';
 }
 

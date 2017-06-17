@@ -29,6 +29,7 @@ function switchPage(id){
 
         if (id === 'myroom'){
             checkIfLogedIn();
+            showBookTable();
         }
 }
 
