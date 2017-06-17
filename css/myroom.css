@@ -64,8 +64,13 @@ a.button-entry{
     border-radius: 2px;
     text-decoration: none;
     transition: 0.3s;
+	cursor: pointer;
 }
 
 a.button-entry:hover{
     background: #E44424;
+}
+
+.hide-button{
+	display: none;
 }
