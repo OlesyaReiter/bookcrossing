@@ -14,11 +14,15 @@ function switchPage(id){
 
             for (var i = 0; i < localStorage.length; i++){
                 var value = localStorage.getItem(localStorage.key(i));
-                var obj = JSON.parse(value);
+                try{
+                    var obj = JSON.parse(value);
 
-                if (obj['author']){
-                    fillBookFormSmall(localStorage.key(i), obj);
-                    //fillBookForm(obj);
+                    if (obj['author']){
+                        fillBookFormSmall(localStorage.key(i), obj);
+                        //fillBookForm(obj);
+                    }
+                } catch(e){ 
+                    //do nothing
                 }
             }
         }
@@ -78,8 +82,21 @@ function fillBookFormSmall(key, dataObj){
     var thumbsUpButton = getElementSmall(buttonsSmallContainer, "thumbsUpButton");
     var viewMoreButton = getElementSmall(buttonsSmallContainer, "viewMoreButton");
 
-    thumbsUpButton.addEventListener("click", function(){
-        alert(key);
+    thumbsUpButton.addEventListener("click", function(){        
+        var mapping = {
+            client: localStorage.getItem('nickName'),
+            wantedBookKey: key
+        };
+
+        var booksMappings = localStorage.getItem('booksMappings');
+        
+        var array = [];
+        if (booksMappings){
+            array = JSON.parse(booksMappings);
+        }
+
+        array.push(mapping);
+        localStorage.setItem('booksMappings', JSON.stringify(array));
     });
 
     viewMoreButton.addEventListener("click", function(){

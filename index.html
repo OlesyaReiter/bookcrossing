@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/smallnewsfeed.css">
     <link rel="stylesheet" href="css/modal_popup.css">
+    <link rel="stylesheet" href="css/info_table.css">
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -147,8 +148,10 @@
       <!-- Profile -->
       <div class="w3-card-2 w3-round w3-white">
         <div class="w3-container">
+
          <h4 class="w3-center" id="myProfileTitle">My Profile</h4>
          <p class="w3-center"><img src="images/avatar.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         
          <div align="left" >
           <a class="button-entry hide-button" onclick="showForm()" id="newEntryButton">Create new entry</a>
           <a class="button-entry" onclick="showIntroduceForm()" id="introduceButton">Introduce yourself</a>
@@ -239,6 +242,15 @@
          </div></div>
          <div class="bl fl2">
          <div class="main-room-col">
+            <div class="w3-left hide-button" style="width: 100%; margin-top: 30px; margin-bottom: 30px;">
+                <table id="loader_table">
+                    <tr>
+                        <th>Person who wants your book</th>
+                        <th>Book author</th>
+                        <th>Book name</th>
+                    </tr>                        
+                </table>
+         </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eius, minima facilis. Tempora id
                         nihil sint hic voluptas vel amet voluptatibus dolor perferendis accusantium error sit provident,
                         perspiciatis, neque inventore assumenda voluptate consequatur fugit ratione et. Assumenda reprehenderit
