@@ -1,0 +1,16 @@
+
+	.mydeals {
+		display: flex;
+		width: 100%;
+
+	}
+
+	.mydeals {
+		display: flex;
+	}
+
+	.books {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: row;
+	}
