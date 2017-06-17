@@ -60,9 +60,22 @@ function foo(){
 	findBookAuthor : ["J.K. Rowling"],
 	}
 
+	var Pavlina = {
+	firstName: "Pavlina",
+	lastName : "Korol",
+	email : "@mail.com",
+	phone : "3803112455",
+	myBookName : ["Help Your Kids with Maths"],
+	myBookAuthor : ["Carol Vorderman"],
+	findBookName : ["bla bla"],
+	findBookAuthor : ["J.K. Rowling"],
+	}
+
+
 	arr.push(Petro);
 	arr.push(Ivan);
 	arr.push(Ivanka);
+	arr.push(Pavlina);
 
 
 
@@ -83,27 +96,72 @@ function foo(){
 	show2();
 
 
+	var result1=[];
 	var result=[];
 
 	function compaire () {
-		for (var y = 0; y < arr[0].myBookName.length; y++) {
 
-			for (var i = 1 ; i < arr.length; i++) {
+		for (var x = 0; x < arr[0].findBookName.length; x++) {
 
-				for (var j = 0; j < arr[i].findBookName.length; j++) {
+			for (var a = 0 ; a < arr.length; a++) {
 
-					console.log(arr[0].myBookName[y]===arr[i].findBookName[j]);
+				for (var b = 0; b < arr[a].myBookName.length; b++) {
 
-					if (arr[0].myBookName[y]===arr[i].findBookName[j] && arr[0].myBookAuthor[y]===arr[i].findBookAuthor[j]) {
+					if (arr[0].findBookName[x]===arr[a].myBookName[b]) {
 
-						result.push({bookName: arr[0].myBookName[y], authorName: arr[0].myBookAuthor[y], name:arr[i].firstName});
+					arr[a].color='yellow';
+
+					result1.push(arr[a]);
+
 					}
 				}
 			}
 		}
 
+		for (var y = 0; y < arr[0].myBookName.length; y++) {
+
+			for (var i = 0 ; i < result1.length; i++) {
+
+				for (var j = 0; j < result1[i].findBookName.length; j++) {
+
+					if (arr[0].myBookName[y]===result1[i].findBookName[j]) {
+
+						result1[i].color="green";
+						
+					}
+				}
+			}
+		}
 	}
 
-	compaire()
-	console.log(result);
+	compaire();
+
+console.log(result1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
