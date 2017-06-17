@@ -117,56 +117,6 @@
                         </div>
                     </div>
 
-                    
-                    <!--<div class="form-login" id="formLogin">
-                        
-							<label for="login">Login:</label>
-                        	<input type="text" id="login" name="login" placeholder="Your login.." required>
-							
-							<label for="password">Password:</label>
-                        	<input type="password" id="password" name="password" placeholder="Your password.." required>
-
-                        	<label for="firstName">First Name:</label>
-                        	<input type="text" id="firstName" name="firstName" placeholder="Your name.." required>
-
-                        	<label for="lastName">Last Name:</label>
-                        	<input type="text" id="lastName" name="lastName" placeholder="Your last name.." required>
-
-                        	<label for="email">Email:</label>
-                        	<input type="text" id="email" name="email" placeholder="example@gmail.com" required>
-
-							<label for="phone">Phone:</label>
-                        	<input type="text" id="phone" name="phone" placeholder="Your telephone.." required>
-
-                        	<label for="myBookName">My book title:</label>
-                        	<input type="text" id="myBookName" name="myBookName" placeholder="My book title"  required>
-
-                        	<label for="myBookAuthor">Author:</label>
-                        	<input type="text" id="myBookAuthor" name="myBookAuthor" placeholder="My author" required>
-
-							<label for="findBookName">Find book title:</label>
-                        	<input type="text" id="findBookName" name="findBookName" placeholder="Find book title"  required>
-
-                        	<label for="findBookAuthor">Author:</label>
-                        	<input type="text" id="findBookAuthor" name="findBookAuthor" placeholder="Find author" required>
-
-							<!-- <a href="" onclick="foo1()">asdads</a> 
-                            <input type="button" value="button" onclick="foo(); switchVisible()">
-                            <!-- <input type="button" name="" onclick="show();show2()"> 
-
-                    </div>-->
-
-                    <!-- <div class="content" id="formContent"> -->
-                        <!-- <div id="myBook"></div> -->
-                        <!-- <input type="text" name="" id="newBook"> -->
-                        <!-- <input type="button" name="" onclick="show()"> -->
-                        <!-- <input type="button" name="" onclick="addbooks()"> -->
-                    <!-- </div> -->
-                    <!-- <div class="content" id="formContent"> -->
-                        <!-- <div id="myBook2"></div> -->
-                        <!-- <input type="button" name="" onclick="show2()"> -->
-                    <!-- </div> -->
-
                 </section>
                 <section class="section2" id="myroom" style="display: none;">
 
@@ -196,25 +146,17 @@
 
                           
 
-                          <form action="" class="myBookIsbn" id="myBookState">Book state: <br/><br/>
-                            <input type="radio" name="state" value="good"> Perfect<br>
-                            <input type="radio" name="state" value="normal"> Good<br>
-                            <input type="radio" name="state" value="bad"> Normal
-                          </form>
-
-
-                          <form  class="bookPic" id="bookPic" action="myform.cgi">
-                            <input type="file" name="fileupload" value="fileupload" id="fileupload">
-                            <label for="fileupload"> Upload a book picture</label>
-                            <br><input type="image" src="/wp-content/uploads/sendform.png" alt="Submit" width="100">
-                          </form>
+                          <label for="statys">State book:</label>
+                           <select name="statys" id="statys" name="statys">
+                            <option value="good">good</option>
+                            <option value="normal">normal</option>
+                            <option value="bad">bad</option>
+                          </select>
 
 
 
-
-
-                        <label for="author">Author:</label>
-                          <input type="text" id="findBookauthor" name="author" placeholder=" Please write author of book" required>
+                        <label for="author2">Author:</label>
+                          <input type="text" id="findBookauthor" name="author2" placeholder=" Please write author of book" required>
               
                           <label for="bookName">Book name:</label>
                           <input type="text" id="findBookName" name="bookName" placeholder="Please write name of book" required>
@@ -225,19 +167,18 @@
                           <label for="bookIsbm">ISBN:</label>
                           <input type="text" id="findBookIsbn" name="bookIsbm" placeholder="Please write ISBN number" required>
                          
-                                                 
-                         <form action="" id="findBookIsbn">Book state: <br/><br/>
-                              <input type="radio" name="state" value="good"> Perfect<br>
-                              <input type="radio" name="state" value="normal"> Good<br>
-                              <input type="radio" name="state" value="bad"> Normal
-                         </form>  
+                          <label for="BookIsbn">State book:</label>
+                           <select name="BookIsbn" id="BookIsbn" name="BookIsbn">
+                            <option value="good">good</option>
+                            <option value="normal">normal</option>
+                            <option value="bad">bad</option>
+                          </select>                       
         
-                        <form action="" id="bookDescript">Book description: <br/><br/>
-                              <textarea rows="6" cols="100" name="description">
-                              Enter book description here...</textarea>
-                        </form>
+                        
+                              <textarea rows="6" cols="100" name="description" id="bookDescript" placeholder="Enter book description here"></textarea>
+                      
 
-
+                     <input type="button" value="button" onclick="foo(); switchVisible()">
 
       </div>
       <br>
@@ -263,40 +204,6 @@
       <br></div>
       
 
-    
-    <!-- End Left Column 
-    </div>
-
-
-
-                  <!--   <h2>Petro Makitra</h2>
-                    <div class="mydeals">
-                        <div class="post"></div>
-                    </div>
-                    <article class="books">
-                        <div id="myBooks">
-                           <h3>My Books</h3>
-                        </div>
-                        <div id="neededBooks">
-                           <h3>Needed Books</h3>
-                        </div>
-                    </article>
-
-                    <article class="books">
-                        <div id="myBooks">
-                           <div>
-                                <input type="text" name="" id="addMyBooks">
-                                <input type="button" name="" id="addMyBooks" value="+" onclick="addMy()">
-                           </div>
-                        </div>
-                        <div id="neededBooks">
-                            <div>
-                                <input type="text" name="" id="addNeededBooks">
-                                <input type="button" name="" id="" value="+" onclick="addNeed()">
-                            </div>
-                        </div>
-                    </article>
-                    <div><input type="button" name="" value="Find my book" onclick="createList()"</div> -->
                 </section>
 
                 <section class="section2" id="partners" style="display: none;">
