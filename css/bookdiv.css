@@ -22,9 +22,10 @@
 }
 .main-book-content{
     display: flex; 
-    flex-direction: column;
+    flex-direction: row;
     width: 100vw;
     padding: 5px;
+    flex-wrap: wrap;
 }
 
 .book-info-span{

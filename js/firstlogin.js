@@ -1,5 +1,5 @@
 
-var counter = localStorage.length;
+var counter = localStorage.length + (new Date()).getMilliseconds();
 
 
 function foo(){

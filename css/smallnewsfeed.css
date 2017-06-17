@@ -27,9 +27,10 @@
     .book-name-small{
         font-size: 11pt;
         margin-top: -10px;
+        font-style: italic;
     }
 
     .book-div-small-hide{
         display: none;
-        width: 800px;
+        width: 400px;
     }
