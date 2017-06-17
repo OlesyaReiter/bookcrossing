@@ -37,7 +37,7 @@
 	display: -webkit-box; display: -ms-flexbox; display: flex;
     max-width: 1000px;
     margin: 10px auto;
-    justify-content: center;
+    justify-content: left;
     align-items: stretch;
     align-content: stretch;
     flex-flow: row wrap;
@@ -57,6 +57,7 @@
 
 
 a.button-entry{
+	display: left;
     background: #406cd0;
     color: #fff;
     padding: 5px 10px;
