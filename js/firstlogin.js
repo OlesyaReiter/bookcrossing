@@ -20,5 +20,19 @@ function foo(){
   var obj = JSON.stringify(user);
   localStorage.setItem(counter++, obj);
 
-  
+  clearForm();
 }  
+
+function clearForm(){
+  document.getElementById("myBookauthor").value = '';
+  document.getElementById("myBookName").value = '';
+  document.getElementById("myBookYear").value = '';
+  document.getElementById("myBookIsbn").value = '';
+  //document.getElementById("statys").value = '';
+  document.getElementById("findBookauthor").value = '';
+  document.getElementById("findBookName").value = '';
+  document.getElementById("findBookYear").value = '';
+  document.getElementById("findBookIsbn").value = '';
+  //document.getElementById("BookIsbn").value = '';
+  document.getElementById("bookDescript").value = '';
+}
