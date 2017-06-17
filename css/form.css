@@ -32,6 +32,28 @@ input[type=submit] {
     cursor: pointer;
     transition: 0.5s;
 }
+input[type=radio] {
+    width: 20%;
+    background-color: #406cd0;    
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+input[type=number] {
+    width: 20%;
+    background-color: #406cd0;    
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+}
 
 input[type=submit]:hover {
     background-color:  #E44424;

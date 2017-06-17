@@ -57,6 +57,8 @@
                     
                 </section>
                 <section class="section2" id="bookcrossing" style="display: none;">
+
+                    
                     <!--<div class="form-login" id="formLogin">
                         
 							<label for="login">Login:</label>
@@ -117,7 +119,67 @@
          <p class="w3-center"><img src="images/avatar.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <div align="center" >
           <a href="#" class="button-entry">Create new entry</a>
-        </div></div>
+        
+        <div class="form-login" id="formLogin">
+                        
+                          <label for="author">Author:</label>
+                          <input type="text" id="myBookauthor" name="author" placeholder=" Please write author of book" required>
+              
+                          <label for="bookName">Book name:</label>
+                          <input type="text" id="myBookName" name="bookName" placeholder="Please write name of book" required>
+
+                          <label for="bookYear">Book year</label>
+                          <input type="text" id="myBookYear" name="bookYear" placeholder="year" required>
+
+                          <label for="bookIsbm">ISBN:</label>
+                          <input type="text" id="myBookIsbn" name="bookIsbm" placeholder="Please write ISBN number" required>
+
+                          
+
+                          <form action="" id="myBookIsbn">Book state: <br/><br/>
+                            <input type="radio" name="state" value="good"> Perfect<br>
+                            <input type="radio" name="state" value="normal"> Good<br>
+                            <input type="radio" name="state" value="bad"> Normal
+                          </form>
+
+
+                          <form action="myform.cgi">
+                            <input type="file" name="fileupload" value="fileupload" id="fileupload">
+                            <label for="fileupload"> Select a file to upload</label>
+                            <br><input type="image" src="/wp-content/uploads/sendform.png" alt="Submit" width="100">
+                            </form>
+
+
+
+
+
+                        <label for="author">Author:</label>
+                          <input type="text" id="findBookauthor" name="author" placeholder=" Please write author of book" required>
+              
+                          <label for="bookName">Book name:</label>
+                          <input type="text" id="findBookName" name="bookName" placeholder="Please write name of book" required>
+
+                          <label for="bookYear">Book year</label>
+                          <input type="text" id="findBookYear" name="bookYear" placeholder="year" required>
+
+                          <label for="bookIsbm">ISBN:</label>
+                          <input type="text" id="findBookIsbn" name="bookIsbm" placeholder="Please write ISBN number" required>
+                         
+                                                 
+                         <form action="" id="findBookIsbn">Book state: <br/><br/>
+                           <input type="radio" name="state" value="good"> Perfect<br>
+                           <input type="radio" name="state" value="normal"> Good<br>
+                           <input type="radio" name="state" value="bad"> Normal
+                         </form> 
+        
+                        <form action="" id="bookDescript">Book description: <br/><br/>
+                        <textarea rows="6" cols="100" name="description">
+                        Enter book description here...</textarea>
+            
+                        </form>
+
+
+
       </div>
       <br>
       
