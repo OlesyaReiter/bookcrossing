@@ -16,7 +16,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
     <script src="js/nav.js"></script>
-    <script src="js/firstlogin.js"></script>
+   
     <script src="js/hide_div.js"></script>
 
     <script src="https://use.fontawesome.com/f3fca8b6e1.js"></script>
@@ -36,7 +36,7 @@
             <nav class="pullLeft">
                 <a onclick="switchPage('about')" id="about_button" class="selected-button nohover">About</a>
                 <a onclick="switchPage('bookcrossing')" id="bookcrossing_button">Bookcrossing</a>
-                <a onclick="switchPage('myroom')" id="myroom_button">My Room</a>
+                <a onclick="switchPage('myroom')" id="myroom_button" onclick="show();show2()">My Room</a>
                 <a onclick="switchPage('partners')" id="partners_button">Our Partners</a>
             </nav>
 
@@ -89,10 +89,20 @@
 
 							<!-- <a href="" onclick="foo1()">asdads</a> -->
                             <input type="button" value="button" onclick="foo(); switchVisible()">
-                       
+                            <!-- <input type="button" name="" onclick="show();show2()"> -->
+
                     </div>
 
-                    <div class="content" id="formContent"></div>
+                    <!-- <div class="content" id="formContent"> -->
+                        <!-- <div id="myBook"></div> -->
+                        <!-- <input type="text" name="" id="newBook"> -->
+                        <!-- <input type="button" name="" onclick="show()"> -->
+                        <!-- <input type="button" name="" onclick="addbooks()"> -->
+                    <!-- </div> -->
+                    <!-- <div class="content" id="formContent"> -->
+                        <!-- <div id="myBook2"></div> -->
+                        <!-- <input type="button" name="" onclick="show2()"> -->
+                    <!-- </div> -->
 
                 </section>
                 <section class="section2" id="myroom" style="display: none;">
@@ -101,16 +111,18 @@
                        <div class="post"></div>
                    </div>
                    <article class="books">
-                       <div class="myBooks">
+                       <div id="myBooks">
                            <h3>My Books</h3>
                          
                        </div>
-                       <div class="neededBooks">
+                       <div id="neededBooks">
                            <h3>Needed Books</h3>
                          
                        </div>
+                       
                    </article>
                 </section>
+
                 <section class="section2" id="partners" style="display: none;">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eius, minima facilis. Tempora id
                         nihil sint hic voluptas vel amet voluptatibus dolor perferendis accusantium error sit provident,
@@ -132,6 +144,7 @@
             <p class="copyright">All content copyright 2017</p>
         </footer>
     </div>
+     <script src="js/firstlogin.js"></script>
 </body>
 
 </html>

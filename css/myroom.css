@@ -15,6 +15,6 @@
 		flex-direction: row;
 	}
 
-	.myBooks .neededBooks {
+	#myBooks #neededBooks {
 		flex:1;
 	}

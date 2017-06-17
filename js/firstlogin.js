@@ -64,6 +64,19 @@ function foo(){
 	arr.push(Ivan);
 	arr.push(Ivanka);
 
-	function compaire () {
 
+	function show(){
+		for(var i = 0; i < arr[0].myBookName.length; i++){
+			document.getElementById("myBooks").innerHTML += arr[0].myBookName[i] +"</br>";
+			// console.log(arr);
+		}
 	}
+	function show2(){
+		for(var i = 0; i < arr[0].findBookName.length; i++){
+			document.getElementById("neededBooks").innerHTML += arr[0].findBookName[i] +"</br>";
+		// console.log(arr);
+		
+		}
+	}	
+	show(); 
+	show2();
