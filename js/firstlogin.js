@@ -32,7 +32,7 @@ function foo(){
 	lastName : "Makitra",
 	email : "makitra@mail.com",
 	phone : "3803214455",
-	myBookName : ["Harry Potter and the Philosopher's Stone", "Harry Potter and the Chamber of Secrets", ""],
+	myBookName : ["Harry Potter and the Philosopher's Stone", "Harry Potter and the Chamber of Secrets"],
 	myBookAuthor : ["J.K. Rowling", "J.K. Rowling"],
 	findBookName : ["Help Your Kids with Maths"],
 	findBookAuthor : ["Carol Vorderman"],
@@ -45,6 +45,13 @@ function foo(){
 	phone : "3803114455",
 	myBookName : ["Help Your Kids with Maths"],
 	myBookAuthor : ["Carol Vorderman"],
-	findBookName : ["Help Your Kids with Maths" "Harry Potter and the Philosopher's Stone"],
+	findBookName : ["Harry Potter and the Philosopher's Stone"],
 	findBookAuthor : ["J.K. Rowling"],
+	}
+
+	arr.push(Petro);
+	arr.push(Ivan);
+console.log(arr);
+	function compaire (user, arr) {
+
 	}
