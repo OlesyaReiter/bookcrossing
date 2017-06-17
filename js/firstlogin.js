@@ -49,9 +49,21 @@ function foo(){
 	findBookAuthor : ["J.K. Rowling"],
 	}
 
+	var Ivanka = {
+	firstName: "Ivanka",
+	lastName : "Kril",
+	email : "kril@mail.com",
+	phone : "3803112455",
+	myBookName : ["Help Your Kids with Maths"],
+	myBookAuthor : ["Carol Vorderman"],
+	findBookName : ["Harry Potter and the Chamber of Secrets"],
+	findBookAuthor : ["J.K. Rowling"],
+	}
+
 	arr.push(Petro);
 	arr.push(Ivan);
-console.log(arr);
-	function compaire (user, arr) {
+	arr.push(Ivanka);
+
+	function compaire () {
 
 	}
