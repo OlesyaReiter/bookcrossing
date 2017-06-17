@@ -15,6 +15,7 @@ function foo(){
   findBookIsbn : document.getElementById("findBookIsbn").value,
   BookIsbn : document.getElementById("BookIsbn").value,
   bookDescript : document.getElementById("bookDescript").value,
+  owner: localStorage.getItem("nickName")
  }
 
   var obj = JSON.stringify(user);

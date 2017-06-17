@@ -72,9 +72,14 @@ function fillBookFormSmall(dataObj){
         alert('viewMoreButton');
     });
 
+    var ownerSmallContainer = getElementSmall(clone, "ownerSmallContainer");
+    var ownerSmall = getElementSmall(ownerSmallContainer, "ownerSmall");
+
     authorId.innerHTML = dataObj.author ? dataObj.author : "-";
     bookNameId.innerHTML = dataObj.bookName ? dataObj.bookName : "-";    
     commentId.innerHTML = dataObj.bookDescript ? dataObj.bookDescript : "-";
+    //Inserting the owner information
+    ownerSmall.innerHTML = dataObj.owner ? dataObj.owner : "N/A";
 
     clone.style.display = 'block';
     div.insertBefore(clone, div.firstChild);

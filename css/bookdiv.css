@@ -32,3 +32,9 @@
     text-align:center; 
     background: #a9a9a9;
 }
+
+.owner-small{
+    color: #a9a9a9;
+    font-style: italic;
+    font-size: 10pt;
+}
