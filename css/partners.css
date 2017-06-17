@@ -3,3 +3,25 @@
     flex-direction: row;
     margin: 0 0 10px 10px;
 }
+
+.shop{
+    display: -webkit-box; display: -ms-flexbox; display: flex;
+    justify-content: column;
+    max-width: 1000px;
+    margin: 10px auto;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    flex-flow: row wrap;
+
+}
+
+.blpart{
+    flex: 1 1 200px; text-align: center;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flpart1{flex: 1 1 350px;}
+.flpart2{flex: 3 1 350px;}
