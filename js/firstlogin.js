@@ -26,5 +26,5 @@ function foo(){
     document.getElementById("findBookAuthor").value = "";
 }
 
-export {arr};
+
 
