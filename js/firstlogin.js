@@ -65,6 +65,7 @@ function foo(){
 	arr.push(Ivanka);
 
 
+
 	function show(){
 		for(var i = 0; i < arr[0].myBookName.length; i++){
 			document.getElementById("myBooks").innerHTML += arr[0].myBookName[i] +"</br>";
@@ -80,3 +81,29 @@ function foo(){
 	}	
 	show(); 
 	show2();
+
+
+	var result=[];
+
+	function compaire () {
+		for (var y = 0; y < arr[0].myBookName.length; y++) {
+
+			for (var i = 1 ; i < arr.length; i++) {
+
+				for (var j = 0; j < arr[i].findBookName.length; j++) {
+
+					console.log(arr[0].myBookName[y]===arr[i].findBookName[j]);
+
+					if (arr[0].myBookName[y]===arr[i].findBookName[j] && arr[0].myBookAuthor[y]===arr[i].findBookAuthor[j]) {
+
+						result.push({bookName: arr[0].myBookName[y], authorName: arr[0].myBookAuthor[y], name:arr[i].firstName});
+					}
+				}
+			}
+		}
+
+	}
+
+	compaire()
+	console.log(result);
+
