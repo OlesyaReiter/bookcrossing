@@ -31,7 +31,7 @@ function switchPage(id){
 function checkIfLogedIn(){
     if (localStorage.getItem("nickName") && localStorage.getItem("nickName") !== ''){
         var myProfileTitle = document.getElementById("myProfileTitle");
-        myProfileTitle.innerHTML += ' (' + localStorage.getItem("nickName") + ')';
+        myProfileTitle.innerHTML = 'My Profile' + ' (' + localStorage.getItem("nickName") + ')';
         showMyRoomButton(true);
     }
 }
