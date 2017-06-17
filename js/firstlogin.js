@@ -14,16 +14,16 @@ function foo(){
 
 	arr.push(user);
     console.log(arr);
-    document.getElementById("login").value = ""
-    document.getElementById("password").value = ""
-    document.getElementById("firstName").value = ""
-    document.getElementById("lastName").value = ""
-    document.getElementById("email").value = ""
-    document.getElementById("phone").value = ""
-    document.getElementById("myBookName").value = ""
-    document.getElementById("myBookAuthor").value = ""
-    document.getElementById("findBookName").value = ""
-    document.getElementById("findBookAuthor").value = ""
+    document.getElementById("login").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("firstName").value = "";
+    document.getElementById("lastName").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("myBookName").value = "";
+    document.getElementById("myBookAuthor").value = "";
+    document.getElementById("findBookName").value = "";
+    document.getElementById("findBookAuthor").value = "";
 }
 
 export {arr};

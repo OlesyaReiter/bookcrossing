@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
     <script src="js/nav.js"></script>
     <script src="js/firstlogin.js"></script>
+    <script src="js/hide_div.js"></script>
 
     <script src="https://use.fontawesome.com/f3fca8b6e1.js"></script>
     <title>Bookcrossing</title>
@@ -52,7 +53,7 @@
                     
                 </section>
                 <section class="section2" id="bookcrossing" style="display: none;">
-                    <div class="form-div">
+                    <div class="form-login" id="formLogin">
                         
 							<label for="login">Login:</label>
                         	<input type="text" id="login" name="login" placeholder="Your login.." required>
@@ -85,9 +86,11 @@
                         	<input type="text" id="findBookAuthor" name="findBookAuthor" placeholder="Find author" required>
 
 							<!-- <a href="" onclick="foo1()">asdads</a> -->
-                            <input type="button" value="button" onclick="foo()">
+                            <input type="button" value="button" onclick="foo(); switchVisible()">
                        
                     </div>
+
+                    <div class="content" id="formContent"></div>
 
                 </section>
                 <section class="section2" id="myroom" style="display: none;">
