@@ -119,8 +119,13 @@
          <p class="w3-center"><img src="images/avatar.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <div align="center" >
           <a href="#" class="button-entry">Create new entry</a>
+         </div>
         
-        <div class="form-login" id="formLogin">
+<div class="form-login" id="formLogin">
+                        
+                          <label for="author">Author:</label>
+                          <input type="text" id="myBookauthor" name="author" placeholder=" Please write author of book" required>
+     <div class="form-login" id="formLogin">
                         
                           <label for="author">Author:</label>
                           <input type="text" id="myBookauthor" name="author" placeholder=" Please write author of book" required>
@@ -136,18 +141,18 @@
 
                           
 
-                          <form action="" id="myBookIsbn">Book state: <br/><br/>
+                          <form action="" class="myBookIsbn" id="myBookState">Book state: <br/><br/>
                             <input type="radio" name="state" value="good"> Perfect<br>
                             <input type="radio" name="state" value="normal"> Good<br>
                             <input type="radio" name="state" value="bad"> Normal
                           </form>
 
 
-                          <form action="myform.cgi">
+                          <form  class="bookPic" id="bookPic" action="myform.cgi">
                             <input type="file" name="fileupload" value="fileupload" id="fileupload">
-                            <label for="fileupload"> Select a file to upload</label>
+                            <label for="fileupload"> Upload a book picture</label>
                             <br><input type="image" src="/wp-content/uploads/sendform.png" alt="Submit" width="100">
-                            </form>
+                          </form>
 
 
 
@@ -167,15 +172,14 @@
                          
                                                  
                          <form action="" id="findBookIsbn">Book state: <br/><br/>
-                           <input type="radio" name="state" value="good"> Perfect<br>
-                           <input type="radio" name="state" value="normal"> Good<br>
-                           <input type="radio" name="state" value="bad"> Normal
-                         </form> 
+                              <input type="radio" name="state" value="good"> Perfect<br>
+                              <input type="radio" name="state" value="normal"> Good<br>
+                              <input type="radio" name="state" value="bad"> Normal
+                         </form>  
         
                         <form action="" id="bookDescript">Book description: <br/><br/>
-                        <textarea rows="6" cols="100" name="description">
-                        Enter book description here...</textarea>
-            
+                              <textarea rows="6" cols="100" name="description">
+                              Enter book description here...</textarea>
                         </form>
 
 
@@ -241,18 +245,22 @@
                 </section>
 
                 <section class="section2" id="partners" style="display: none;">
+                    <div class="shop1">
+                        <div class="shop-image"><img src="images/bookshop1.jpg" alt="bookshop1"></div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eius, minima facilis. Tempora id
                         nihil sint hic voluptas vel amet voluptatibus dolor perferendis accusantium error sit provident,
                         perspiciatis, neque inventore assumenda voluptate consequatur fugit ratione et. Assumenda reprehenderit
                         enim cupiditate distinctio harum quas perferendis laborum repellendus, modi expedita facilis nisi
                         odit vitae sed sapiente adipisci asperiores porro dicta perspiciatis saepe culpa iusto minima! Nesciunt
-                        sapiente, rem dolorem nam sit modi!</p>
+                        sapiente, rem dolorem nam sit modi!</p></div>
+                    <div class="shop1">
+                        <div class="shop-image"><img src="images/bookshop2.jpg" alt="bookshop1"></div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eius, minima facilis. Tempora id
                         nihil sint hic voluptas vel amet voluptatibus dolor perferendis accusantium error sit provident,
                         perspiciatis, neque inventore assumenda voluptate consequatur fugit ratione et. Assumenda reprehenderit
                         enim cupiditate distinctio harum quas perferendis laborum repellendus, modi expedita facilis nisi
                         odit vitae sed sapiente adipisci asperiores porro dicta perspiciatis saepe culpa iusto minima! Nesciunt
-                        sapiente, rem dolorem nam sit modi!</p>
+                        sapiente, rem dolorem nam sit modi!</p></div>
                 </section>
             </main>
 
