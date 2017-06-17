@@ -5,7 +5,14 @@ function switchPage(id){
         hideActivePage();
         showPage(id);
         if(id === 'bookcrossing'){
-            addTwoDUMMYBooks();
+            for (var i = 0; i < localStorage.length; i++){
+                var value = localStorage.getItem(localStorage.key(i));
+                var obj = JSON.parse(value);
+
+                if (obj['author']){
+                    fillBookForm(obj);
+                }
+            }
         }
 }
 // closes active page 
@@ -87,14 +94,14 @@ function fillBookForm(dataObj){
     authorId.innerHTML = dataObj.author;
     bookNameId.innerHTML = dataObj.bookName;
     bookYearId.innerHTML = dataObj.bookYear;
-    isbnId.innerHTML = isbnId.isbn;
-    bookStateId.innerHTML = bookStateId.bookState;
-    authorIdR.innerHTML = dataObj.requestedAuthor;
-    bookNameIdR.innerHTML = dataObj.requestedBookName;
-    bookYearIdR.innerHTML = dataObj.requestedBookYear;
-    isbnIdR.innerHTML = dataObj.requestedIsbn;
-    bookStateIdR.innerHTML = dataObj.requestedBookState;
-    commentId.innerHTML = dataObj.comment;
+    isbnId.innerHTML = isbnId.bookIsbm;
+    bookStateId.innerHTML = bookStateId.statys;
+    authorIdR.innerHTML = dataObj.author2;
+    bookNameIdR.innerHTML = dataObj.findBookName;
+    bookYearIdR.innerHTML = dataObj.findBookYear ? dataObj.findBookYear : "-";
+    isbnIdR.innerHTML = dataObj.findBookIsbn ? dataObj.findBookIsbn : "-";
+    bookStateIdR.innerHTML = dataObj.BookIsbn ? dataObj.BookIsbn : "-";
+    commentId.innerHTML = dataObj.bookDescript ? dataObj.bookDescript : "-";
 
     clone.style.display = 'flex';
     div.appendChild(clone);
