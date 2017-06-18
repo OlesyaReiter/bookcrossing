@@ -1,7 +1,7 @@
-
+/* 
 
 #loader_table{
-/*     font: 20px; */
+font: 20px;
 }
 
 table {
@@ -25,7 +25,7 @@ td, th {
 }
 
 th{
-   /* background-color: #73847A; */
+   background-color: #73847A;
    background:url(../images/bg6.png);
    font-size: 18px;
    color:#565252;
@@ -49,3 +49,39 @@ tr:nth-child(even) {
     display: none;
 }
 
+ */
+
+
+ table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+}
+
+td, th {
+    border: 2px solid #FAF2F2;
+    text-align: left;
+    padding: 13px;
+    font-size: 18px;
+}
+
+th{
+    background-color: #ffccb3;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+    background-color: #AFB9B2;
+}
+
+.fa-fw{
+    vertical-align: middle;
+}
+
+#spinner{
+    display: none;
+}
