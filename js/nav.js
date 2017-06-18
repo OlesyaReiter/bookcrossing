@@ -5,18 +5,20 @@ function switchPage(id){
         hideActivePage();
         showPage(id);
         if(id === 'bookcrossing'){
-            //Clean div container
+            //Clean div container with newsfeeds
             var div = document.getElementById("info_div");
             while (div.hasChildNodes()) {
                 div.removeChild(div.lastChild);
             }
 
-
-            for (var i = 0; i < localStorage.length; i++){
+            //Looping trought all the keys in the localStorag
+            for (var i = 0; i < localStorage.length; i++){                
                 var value = localStorage.getItem(localStorage.key(i));
+                //try..catch - to avoid errors when parsing
                 try{
+                    //To Objects
                     var obj = JSON.parse(value);
-
+                    //Check if our object
                     if (obj['author']){
                         fillBookFormSmall(localStorage.key(i), obj);
                         //fillBookForm(obj);
@@ -84,11 +86,13 @@ function fillBookFormSmall(key, dataObj){
     var viewMoreButton = getElementSmall(buttonsSmallContainer, "viewMoreButton");
 
     thumbsUpButton.addEventListener("click", function(){        
+        //Object to store requested book mapping Name -> Book key
         var mapping = {
             client: localStorage.getItem('nickName'),
             wantedBookKey: key
         };
 
+        //Checks if the mapping array already exists and get it , booksMappings is the key and it;s value is array with mapping objects(books we liked)
         var booksMappings = localStorage.getItem('booksMappings');
         
         var array = [];
@@ -120,41 +124,42 @@ function fillBookFormSmall(key, dataObj){
     div.insertBefore(clone, div.firstChild);
 }
 
-function fillBookForm(dataObj){
-    var div = document.getElementById("info_div");
-    var divBook = document.getElementById("bookId");
-    var clone = divBook.cloneNode(true); 
-    clone.id = "bookId1";
+//Previous version 
+// function fillBookForm(dataObj){
+//     var div = document.getElementById("info_div");
+//     var divBook = document.getElementById("bookId");
+//     var clone = divBook.cloneNode(true); 
+//     clone.id = "bookId1";
 
-    var authorId = getElement(clone, "authorId");
-    var bookNameId = getElement(clone, "bookNameId");
-    var bookYearId = getElement(clone, "bookYearId");
-    var isbnId = getElement(clone, "isbnId");
-    var bookStateId = getElement(clone, "bookStateId");
-    var authorIdR = getElement(clone, "authorIdR");
-    var bookNameIdR = getElement(clone, "bookNameIdR");
-    var bookYearIdR = getElement(clone, "bookYearIdR");
-    var isbnIdR = getElement(clone, "isbnIdR");
-    var bookStateIdR = getElement(clone, "bookStateIdR");
-    var commentId = getElement(clone, "commentId");
+//     var authorId = getElement(clone, "authorId");
+//     var bookNameId = getElement(clone, "bookNameId");
+//     var bookYearId = getElement(clone, "bookYearId");
+//     var isbnId = getElement(clone, "isbnId");
+//     var bookStateId = getElement(clone, "bookStateId");
+//     var authorIdR = getElement(clone, "authorIdR");
+//     var bookNameIdR = getElement(clone, "bookNameIdR");
+//     var bookYearIdR = getElement(clone, "bookYearIdR");
+//     var isbnIdR = getElement(clone, "isbnIdR");
+//     var bookStateIdR = getElement(clone, "bookStateIdR");
+//     var commentId = getElement(clone, "commentId");
 
 
-    authorId.innerHTML = dataObj.author ? dataObj.author : "-";
-    bookNameId.innerHTML = dataObj.bookName ? dataObj.bookName : "-";
-    bookYearId.innerHTML = dataObj.bookYear ? dataObj.bookYear : "-";
-    isbnId.innerHTML = isbnId.bookIsbm ? isbnId.bookIsbm : "-";
-    bookStateId.innerHTML = bookStateId.statys ? bookStateId.statys : "-";
-    authorIdR.innerHTML = dataObj.author2 ? dataObj.author2 : "-";
-    bookNameIdR.innerHTML = dataObj.findBookName ? dataObj.findBookName : "-";
-    bookYearIdR.innerHTML = dataObj.findBookYear ? dataObj.findBookYear : "-";
-    isbnIdR.innerHTML = dataObj.findBookIsbn ? dataObj.findBookIsbn : "-";
-    bookStateIdR.innerHTML = dataObj.BookIsbn ? dataObj.BookIsbn : "-";
-    commentId.innerHTML = dataObj.bookDescript ? dataObj.bookDescript : "-";
+//     authorId.innerHTML = dataObj.author ? dataObj.author : "-";
+//     bookNameId.innerHTML = dataObj.bookName ? dataObj.bookName : "-";
+//     bookYearId.innerHTML = dataObj.bookYear ? dataObj.bookYear : "-";
+//     isbnId.innerHTML = isbnId.bookIsbm ? isbnId.bookIsbm : "-";
+//     bookStateId.innerHTML = bookStateId.statys ? bookStateId.statys : "-";
+//     authorIdR.innerHTML = dataObj.author2 ? dataObj.author2 : "-";
+//     bookNameIdR.innerHTML = dataObj.findBookName ? dataObj.findBookName : "-";
+//     bookYearIdR.innerHTML = dataObj.findBookYear ? dataObj.findBookYear : "-";
+//     isbnIdR.innerHTML = dataObj.findBookIsbn ? dataObj.findBookIsbn : "-";
+//     bookStateIdR.innerHTML = dataObj.BookIsbn ? dataObj.BookIsbn : "-";
+//     commentId.innerHTML = dataObj.bookDescript ? dataObj.bookDescript : "-";
 
-    clone.style.display = 'flex';
-    //div.appendChild(clone);
-    div.insertBefore(clone, div.firstChild);
-}
+//     clone.style.display = 'flex';
+//     //div.appendChild(clone);
+//     div.insertBefore(clone, div.firstChild);
+// }
 
 function getElement(clone, id){
     var elements = clone.getElementsByClassName("book-info-span");

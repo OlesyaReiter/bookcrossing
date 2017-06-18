@@ -38,11 +38,14 @@ function clearForm(){
   document.getElementById("bookDescript").value = '';
 }
 
+//Shows the liked books table
 function showBookTable(){
   var myUser = localStorage.getItem("nickName");
+  //If not logged in then do nothing
   if (!myUser) return;
 
   var booksMappings = localStorage.getItem('booksMappings');
+  //If some mappings in localStorage exist, otherwise do nothing
   if (!booksMappings) return;
 
   var array = JSON.parse(booksMappings);
@@ -50,9 +53,11 @@ function showBookTable(){
 
   for(var i = 0; i < array.length; i++){
     var el = array[i];
+    //Check if our mapping object
     if (el && el['wantedBookKey']){
       var bookStr = localStorage.getItem(el.wantedBookKey);
       var book = JSON.parse(bookStr);
+      //Checks if somebody wanted my book
       if (book && book.owner === myUser){
         arrayToShow.push({
           client: el.client,
