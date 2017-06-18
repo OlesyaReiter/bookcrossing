@@ -1,3 +1,13 @@
+body{
+    background:url(../images/bg9.png);
+
+}
+
+section,main{
+    background:url(../images/bg7.png);
+}
+
+
 .info-item{
     display: flex; 
     flex-direction: column;
