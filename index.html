@@ -13,7 +13,13 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-  
+    <link rel="stylesheet" href="css/smallnewsfeed.css">
+    <link rel="stylesheet" href="css/modal_popup.css">
+    <link rel="stylesheet" href="css/info_table.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     
     <link rel="stylesheet" type="text/css" href="css/myroom.css">
 
@@ -21,7 +27,7 @@
     <script src="js/nav.js"></script>
    
     <script src="js/hide_div.js"></script>
-
+    <script src="js/modal.js"></script>
     <script src="https://use.fontawesome.com/f3fca8b6e1.js"></script>
     <title>Bookcrossing</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -30,8 +36,8 @@
 <body>
     <div class="page-layout">
         <header>
-            <div class="header_img"></div>
-            <h1 class="h1_header">Everything in the world exists <br> in order to end up as a book.</h1>
+            <div class="header_img info-text "></div>
+            <h1 class="h1_header info-text w3-right"><i>Everything in the world exists <br> in order to end up as a book.</i></h1>
         </header>
 
         <div class="wrapper">
@@ -59,10 +65,28 @@
                 </section>
                 <section class="section2" id="bookcrossing" style="display: none;">
 
+                    <!-- Test using Bulma-->
+                    <div class="w3-container w3-card-2 w3-white w3-round w3-margin book-div-small-hide" id="bookDivSmall"><br>
+                        <img src="images/book_ico.jpg" alt="Book" class="w3-left w3-margin-right" >                        
+                        <h2 id='bookAuthorSmall'>Jane Doe</h2>
+                        <p id='bookNameSmall' class="book-name-small">All the cats in the world</p><br>
+                        <hr class="w3-clear">
+                        <p id="bookCommentSmall">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="w3-left" id='ownerSmallContainer'>
+                            <span class='owner-small' id='ownerSmall'>N/A</span>
+                        </div>
+                        <div class="w3-right" id="buttonsSmallContainer">
+                            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" id="thumbsUpButton"><i class="fa fa-thumbs-up"></i>  Want to exchange</button> 
+                            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" id="viewMoreButton"><i class="fa fa-info-circle"></i> View more</button> 
+                        </div>
+                    </div>  
+
+                    <!-- End of block-->
+
                    <div id="info_div" class="main-book-content" >
                             <!--here the html will be rendered-->
                     </div>
-                    <div id='bookId' class="book-one-item" style="display: none;">
+                    <!--<div id='bookId' class="book-one-item" style="display: none;">
                         <div class="info-item-comment">                            
                             <span style="text-align:center; background: #666;">My book</span>
                         </div>
@@ -115,7 +139,7 @@
                             <span style="text-align:center;" >Comment</span>
                             <span id="commentId" class="book-info-span">Some text goes here</span>
                         </div>
-                    </div>
+                    </div>-->
                 </section>
 
                 <section class="section2" id="myroom" style="display: none;">
@@ -124,10 +148,14 @@
       <!-- Profile -->
       <div class="w3-card-2 w3-round w3-white">
         <div class="w3-container">
-         <h4 class="w3-center">My Profile</h4>
+
+         <h4 class="w3-center" id="myProfileTitle">My Profile</h4>
          <p class="w3-center"><img src="images/avatar.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         
          <div align="left" >
-          <a class="button-entry" onclick="showForm()">Create new entry</a>
+          <a class="button-entry hide-button" onclick="showForm()" id="newEntryButton">Create new entry</a>
+          <a class="button-entry" onclick="showIntroduceForm()" id="introduceButton">Introduce yourself</a>
+          <a class="button-entry hide-button" onclick="logout()" id="logoutButton">Logout</a>
          </div>
         
       <div class="form-login" id="formLogin"> 
@@ -192,6 +220,7 @@
                             <option value="normal">normal</option>
                             <option value="bad">bad</option>
                           </select>
+<<<<<<< HEAD
 
                           </div>
                         </fieldset>
@@ -206,6 +235,22 @@
 
                     <input class="button" type="button" value="SEND" onclick="foo(); switchVisible()">
 
+=======
+
+                          </div>
+                        </fieldset>
+                     </div> 
+
+                    <form action="" >
+                          <fieldset>
+                          <legend>BOOK DESCRIPTION</legend>
+                                  <textarea rows="6" id="bookDescript" cols="100" name="description" placeholder="Enter book description here"></textarea>
+                           </fieldset>         
+                  </form>
+
+                    <input class="button" type="button" value="SEND" onclick="foo(); switchVisible()">
+
+>>>>>>> 3fd953e199978c8a9c52c6e0f967f6ac6880863a
                 </div>
 
       <br>
@@ -214,6 +259,15 @@
          </div></div>
          <div class="bl fl2">
          <div class="main-room-col">
+            <div class="w3-left" style="width: 100%; margin-top: 30px; margin-bottom: 30px;">
+                <table id="loader_table" class="hide-button">
+                    <tr>
+                        <th>Person who wants your book</th>
+                        <th>Book author</th>
+                        <th>Book name</th>
+                    </tr>                        
+                </table>
+         </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis eius, minima facilis. Tempora id
                         nihil sint hic voluptas vel amet voluptatibus dolor perferendis accusantium error sit provident,
                         perspiciatis, neque inventore assumenda voluptate consequatur fugit ratione et. Assumenda reprehenderit
@@ -255,11 +309,51 @@
                                                 sapiente, rem dolorem nam sit modi!</div>  
                         </div></div>
                 </section>
+
+                 <!-- Modal window -->
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close" onclick="closeModal()">&times;</span>
+                                <h2>Introduce yourself</h2>
+                            </div>                            
+                            <!-- Table for introduction -->
+                            <div class='modal-div'>
+                                <label for="nickName">Your nick name:</label>
+                                <input type="text" id="nickName" name="author" placeholder="Insert your nick name" required>
+                                <div class="w3-right">
+                                    <a class="button-entry" onclick="Login()">OK</a>
+                                    <a class="button-entry" onclick="closeModal()">Close</a>            
+                                </div>                    
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Modal window for message-->
+                    <div id="myModalMessage" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close" onclick="closeModalMessage()">&times;</span>
+                                <h2>Info message</h2>
+                            </div>                            
+                            <!-- Table for introduction -->
+                            <div class='modal-div'>
+                                <h3>The information has been sent to the owner. <br/>The owner will find the information on the "My room" page as soon as will be logged in. </h3>
+                                <div class="w3-right">                                   
+                                    <a class="button-entry" onclick="closeModalMessage()">Close</a>            
+                                </div>                    
+                            </div>
+                        </div>
+                    </div>
             </main>
 
         </div>
         <footer>
             <p class="copyright">All content copyright 2017</p>
+            
         </footer>
     </div>
      <script src="js/firstlogin.js"></script>

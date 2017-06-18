@@ -1,7 +1,9 @@
-nav{
+nav {
     font-family: 'Fira Sans', sans-serif;
-    margin: 0 auto;	
+    border: 1px solid black;
+    border-radius: 5px;	
 	text-align: left;
+    margin: 10px 0px ;
 }
 
 nav a

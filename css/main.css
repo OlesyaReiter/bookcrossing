@@ -1,4 +1,7 @@
-main{
+body {
+    margin: 0;
+}
+main {
     margin: 10px;
     border: 1px solid #ccc;
     padding: 10px;
