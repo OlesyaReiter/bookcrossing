@@ -2,13 +2,26 @@
 header{
     width: auto;
     height: 150px;
-    background: url(../images/header.jpg) center center;
+    /*background: url(../images/header.jpg) center center;*/
+    background: url(../images/bookshelfhero.jpg) center center;
     background-size: cover;
     padding: 20px;
-    color: black;}
+    color: wheat;
+    
+}
 
 .h1_header{
     font-family: 'Fira Sans', sans-serif;
-    text-align: right;
+    text-align: left;
     vertical-align: bottom;
+    padding: 10px 20px;
+    letter-spacing: 0.1em;
+}
+
+.info-text{
+  /*position: absolute;*/
+  top: 0px;
+  margin-right: 30px;
+  /*left: calc(100% - 240px);*/
+  background-color: rgba(0, 0, 0, 0.7);
 }
